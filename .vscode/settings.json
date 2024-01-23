@@ -1,0 +1,9 @@
+{
+    "cucumberautocomplete.syncfeatures": "test/features/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.strictGherkinValidation": true,
+ 
+ 
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic"
+}
