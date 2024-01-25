@@ -42,5 +42,6 @@ dependencies {
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
+    //useJUnitPlatform()
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
 }
