@@ -1,9 +1,11 @@
 package runner;
 
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import pages.BasedPage;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/resources/features", 
@@ -11,5 +13,9 @@ import io.cucumber.junit.CucumberOptions;
         plugin = {"pretty", "html:target/cucumber-reports"})
 
         public class TesteRunner {
+                @AfterClass
+                public static void tearDown() {
+                        BasedPage.closeBrowser();
+                }
     
 }
