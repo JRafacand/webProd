@@ -48,7 +48,7 @@ public class BasedPage {
             fElementind(locator).click();
         }
 
-        public void write(String locator, String keysToSend){
+        public void writeText(String locator, String keysToSend){
             fElementind(locator).clear();//limpia si hay algo escrito
             fElementind(locator).sendKeys(keysToSend);
         }
