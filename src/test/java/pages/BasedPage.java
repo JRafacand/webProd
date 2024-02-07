@@ -26,7 +26,8 @@ public class BasedPage {
      WebDriverManager va a estar descargando y configurando automáticamente el driver del navegador */
     static {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();   //Inicializa la variable estática 'driver' con una instancia de ChromeDriver
+        driver = new ChromeDriver(); 
+          //Inicializa la variable estática 'driver' con una instancia de ChromeDriver
     }
 
     public BasedPage(WebDriver driver) {
@@ -72,5 +73,13 @@ public class BasedPage {
 
             return options.size();
         }
+
+        public void sleepForSeconds(int seconds) { //otra forma de agregar el sleep
+            try {
+                Thread.sleep(seconds * 1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        } 
     } 
 

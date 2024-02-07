@@ -12,7 +12,7 @@ import pages.BasedPage;
         glue="steps", 
         plugin = {"pretty", "html:target/cucumber-reports"})
 
-        public class TesteRunner {
+        public class TesteRunner {// closed class
                 @AfterClass
                 public static void tearDown() {
                         BasedPage.closeBrowser();
