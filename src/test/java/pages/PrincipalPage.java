@@ -41,8 +41,7 @@ public class PrincipalPage extends BasedPage {
         } else {
             logOut();
         }
-        
-        
+            
     }
 
     public void logOut() {
@@ -50,6 +49,11 @@ public class PrincipalPage extends BasedPage {
         sleepForSeconds(2);
         clickElement("//span[@class='fa fa-sign-out']");
         sleepForSeconds(2);
+    }
+
+    public void actionMenu() {
+        clickElement("//a[@id='j_idt125:0:dynaButton']//i[@class='fa fa-bars fa-2x dropButton']");
+        sleepForSeconds(5);
     }
 
 }

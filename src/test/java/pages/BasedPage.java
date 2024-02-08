@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BasedPage {
@@ -81,5 +82,16 @@ public class BasedPage {
                 e.printStackTrace();
             }
         } 
+
+        public List<String> getDropdownValues(String locator) {
+            List<String> values = new ArrayList<String>();
+            WebElement listasElement = driver.findElement(By.xpath(locator));
+            List<WebElement> options = listasElement.findElements(By.tagName("li"));
+            for (WebElement option : options) {
+                values.add(option.getText());
+                System.out.println(option.getText());
+            }
+            return values;
+        }
     } 
 
